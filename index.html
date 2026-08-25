@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joshua Coquia | IT Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e2e8f0;
+            line-height: 1.6;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #0f172a;
+            border-bottom: 1px solid #1e293b;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 22px;
+            font-weight: bold;
+            color: white;
+        }
+
+        nav a {
+            color: #cbd5e1;
+            text-decoration: none;
+            margin-left: 25px;
+        }
+
+        nav a:hover {
+            color: #38bdf8;
+        }
+
+        section {
+            padding: 100px 8%;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        .hero h2 {
+            font-size: 28px;
+            color: #38bdf8;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            color: #94a3b8;
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 12px 22px;
+            background: #38bdf8;
+            color: #0f172a;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 6px;
+            margin-right: 10px;
+        }
+
+        .button.secondary {
+            background: transparent;
+            color: #38bdf8;
+            border: 1px solid #38bdf8;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .section-title {
+            font-size: 36px;
+            color: white;
+            margin-bottom: 35px;
+        }
+
+        .about-text {
+            max-width: 800px;
+            color: #94a3b8;
+            font-size: 17px;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 25px;
+        }
+
+        .skill {
+            padding: 10px 16px;
+            background: #1e293b;
+            border-radius: 6px;
+            color: #cbd5e1;
+        }
+
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .project {
+            background: #1e293b;
+            padding: 25px;
+            border-radius: 10px;
+            border: 1px solid #334155;
+        }
+
+        .project h3 {
+            color: white;
+            margin-bottom: 10px;
+        }
+
+        .project p {
+            color: #94a3b8;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid #1e293b;
+            color: #64748b;
+        }
+
+        @media (max-width: 700px) {
+            nav {
+                padding: 15px 5%;
+            }
+
+            nav a {
+                margin-left: 10px;
+                font-size: 14px;
+            }
+
+            .hero h1 {
+                font-size: 40px;
+            }
+
+            .hero h2 {
+                font-size: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<nav>
+    <div class="logo">Joshua Coquia</div>
+
+    <div>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+    </div>
+</nav>
+
+<section class="hero">
+    <div>
+        <h1>Joshua Coquia</h1>
+
+        <h2>IT Support Specialist | IT Automation | Systems Administration</h2>
+
+        <p>
+            IT professional with hands-on experience in technical support,
+            troubleshooting, POS systems, networking, Windows administration,
+            and IT automation.
+        </p>
+
+        <a href="#projects" class="button">View My Projects</a>
+        <a href="#contact" class="button secondary">Contact Me</a>
+    </div>
+</section>
+
+<section id="about">
+    <div class="container">
+        <h2 class="section-title">About Me</h2>
+
+        <p class="about-text">
+            I am a BSIT graduate with a strong interest in IT support,
+            systems administration, automation, and cloud technologies.
+            I enjoy solving technical problems and building systems that
+            make IT processes more efficient.
+        </p>
+    </div>
+</section>
+
+<section id="skills">
+    <div class="container">
+        <h2 class="section-title">Technical Skills</h2>
+
+        <div class="skills">
+            <div class="skill">IT Support</div>
+            <div class="skill">Windows</div>
+            <div class="skill">Networking</div>
+            <div class="skill">POS Systems</div>
+            <div class="skill">n8n</div>
+            <div class="skill">Workflow Automation</div>
+            <div class="skill">Google Workspace</div>
+            <div class="skill">Microsoft Azure</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Troubleshooting</div>
+        </div>
+    </div>
+</section>
+
+<section id="projects">
+    <div class="container">
+        <h2 class="section-title">Projects</h2>
+
+        <div class="projects">
+
+            <div class="project">
+                <h3>AI-Powered IT Ticket Automation</h3>
+
+                <p>
+                    An automated IT ticket workflow using n8n, Google Forms,
+                    Google Sheets, AI, and dashboards to classify tickets,
+                    determine priority, recommend actions, and route issues.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>IT Support & Troubleshooting</h3>
+
+                <p>
+                    Hands-on troubleshooting involving computers, POS systems,
+                    networking, software installation, Windows systems,
+                    and hardware-related issues.
+                </p>
+            </div>
+
+            <div class="project">
+                <h3>Azure Administration Lab</h3>
+
+                <p>
+                    Cloud administration and Microsoft Azure practice involving
+                    identity, resources, and basic cloud infrastructure.
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <div class="container">
+        <h2 class="section-title">Contact</h2>
+
+        <p class="about-text">
+            Interested in working together or discussing an IT opportunity?
+            Feel free to reach out.
+        </p>
+    </div>
+</section>
+
+<footer>
+    © 2026 Joshua Coquia. All rights reserved.
+</footer>
+
+</body>
+</html>
