@@ -550,37 +550,216 @@
         }
 
 
-        /* =========================
-           MOBILE
-        ========================= */
+       /* =========================
+   MOBILE NAVIGATION
+========================= */
 
-        @media (max-width: 800px) {
+.menu-toggle {
+    display: none;
 
-            .nav-links {
-                display: none;
-            }
+    background: transparent;
+    border: none;
 
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
+    color: white;
 
-            .hero {
-                padding-top: 130px;
-            }
+    font-size: 28px;
 
-            section {
-                padding: 75px 0;
-            }
+    cursor: pointer;
+}
 
-            .section-title {
-                font-size: 32px;
-            }
 
-            .contact-box {
-                padding: 30px 20px;
-            }
-        }
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
 
+@media (max-width: 800px) {
+
+    .nav-container {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 70px;
+        left: 0;
+
+        width: 100%;
+
+        flex-direction: column;
+
+        gap: 0;
+
+        background: #0b1120;
+
+        border-top: 1px solid #1e293b;
+        border-bottom: 1px solid #1e293b;
+
+        padding: 10px 0;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        display: block;
+
+        padding: 14px 5%;
+
+        width: 100%;
+    }
+
+    .nav-links a:hover {
+        background: #111827;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        min-height: 100vh;
+
+        padding-top: 120px;
+    }
+
+    .hero h1 {
+        font-size: 45px;
+    }
+
+    .hero h2 {
+        font-size: 24px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .buttons {
+        flex-direction: column;
+
+        align-items: stretch;
+    }
+
+    .btn {
+        text-align: center;
+
+        width: 100%;
+    }
+
+
+    /* SECTIONS */
+
+    section {
+        padding: 75px 0;
+    }
+
+    .section-title {
+        font-size: 32px;
+    }
+
+
+    /* ABOUT */
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 30px;
+    }
+
+
+    /* SKILLS */
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 10px;
+    }
+
+    .skill {
+        padding: 15px;
+    }
+
+
+    /* EXPERIENCE */
+
+    .experience {
+        padding-left: 22px;
+    }
+
+    .experience-item::before {
+        left: -29px;
+    }
+
+
+    /* PROJECTS */
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project {
+        padding: 25px;
+    }
+
+
+    /* CERTIFICATIONS */
+
+    .cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* CONTACT */
+
+    .contact-box {
+        padding: 30px 20px;
+    }
+
+}
+
+
+/* =========================
+   SMALL PHONES
+========================= */
+
+@media (max-width: 450px) {
+
+    .container {
+        width: 88%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero h2 {
+        font-size: 21px;
+    }
+
+    .hero-label {
+        font-size: 12px;
+    }
+
+    .section-title {
+        font-size: 29px;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .experience {
+        padding-left: 18px;
+    }
+
+}
     </style>
 </head>
 
@@ -600,19 +779,14 @@
             Joshua<span>.</span>
         </div>
 
-        <div class="nav-links">
+        <div class="nav-links" id="navLinks">
 
-            <a href="#about">About</a>
-
-            <a href="#skills">Skills</a>
-
-            <a href="#experience">Experience</a>
-
-            <a href="#projects">Projects</a>
-
-            <a href="#certifications">Certifications</a>
-
-            <a href="#contact">Contact</a>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#contact">Contact</a>
 
         </div>
 
@@ -1231,7 +1405,17 @@
     </div>
 
 </footer>
+<script>
 
+function toggleMenu() {
+
+    const navLinks = document.getElementById("navLinks");
+
+    navLinks.classList.toggle("active");
+
+}
+
+</script>
 
 </body>
 </html>
