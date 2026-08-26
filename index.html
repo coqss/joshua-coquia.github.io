@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua Coquia | IT Portfolio</title>
+
+    <title>Joshua Coquia | IT Support Specialist & IT Automation</title>
+
+    <meta name="description"
+          content="Joshua Coquia - IT Support Specialist and IT Automation professional portfolio.">
 
     <style>
+
+        /* =========================
+           GLOBAL
+        ========================= */
+
         * {
             margin: 0;
             padding: 0;
@@ -17,285 +26,1212 @@
         }
 
         body {
-            font-family: Arial, sans-serif;
-            background: #0f172a;
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1120;
             color: #e2e8f0;
-            line-height: 1.6;
+            line-height: 1.7;
         }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           NAVIGATION
+        ========================= */
 
         nav {
             position: fixed;
             top: 0;
+            left: 0;
             width: 100%;
-            background: #0f172a;
+
+            background: rgba(11, 17, 32, 0.92);
+            backdrop-filter: blur(10px);
+
             border-bottom: 1px solid #1e293b;
-            padding: 18px 8%;
+
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1150px;
+            width: 90%;
+            margin: auto;
+
             display: flex;
             justify-content: space-between;
             align-items: center;
-            z-index: 1000;
+
+            padding: 18px 0;
         }
 
         .logo {
             font-size: 22px;
             font-weight: bold;
-            color: white;
+            color: #ffffff;
         }
 
-        nav a {
-            color: #cbd5e1;
-            text-decoration: none;
-            margin-left: 25px;
-        }
-
-        nav a:hover {
+        .logo span {
             color: #38bdf8;
         }
 
-        section {
-            padding: 100px 8%;
+        .nav-links {
+            display: flex;
+            gap: 28px;
         }
+
+        .nav-links a {
+            color: #94a3b8;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
 
         .hero {
             min-height: 100vh;
+
             display: flex;
             align-items: center;
-            max-width: 1100px;
-            margin: auto;
+
+            padding-top: 100px;
         }
 
-        .hero h1 {
-            font-size: 56px;
-            color: white;
+        .hero-content {
+            max-width: 850px;
+        }
+
+        .hero-label {
+            color: #38bdf8;
+            font-size: 15px;
+            font-weight: bold;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
             margin-bottom: 15px;
         }
 
-        .hero h2 {
-            font-size: 28px;
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 72px);
+            line-height: 1.1;
+            color: white;
+
+            margin-bottom: 18px;
+        }
+
+        .hero h1 span {
             color: #38bdf8;
-            margin-bottom: 20px;
+        }
+
+        .hero h2 {
+            font-size: clamp(22px, 4vw, 32px);
+            font-weight: 500;
+
+            color: #cbd5e1;
+
+            margin-bottom: 25px;
         }
 
         .hero p {
-            max-width: 700px;
+            max-width: 750px;
+
             color: #94a3b8;
             font-size: 18px;
-            margin-bottom: 30px;
-        }
 
-        .button {
-            display: inline-block;
-            padding: 12px 22px;
-            background: #38bdf8;
-            color: #0f172a;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 6px;
-            margin-right: 10px;
-        }
-
-        .button.secondary {
-            background: transparent;
-            color: #38bdf8;
-            border: 1px solid #38bdf8;
-        }
-
-        .container {
-            max-width: 1100px;
-            margin: auto;
-        }
-
-        .section-title {
-            font-size: 36px;
-            color: white;
             margin-bottom: 35px;
         }
 
-        .about-text {
-            max-width: 800px;
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 22px;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            background: #38bdf8;
+            color: #07111f;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            border: 1px solid #334155;
+            color: #cbd5e1;
+        }
+
+        .btn-outline:hover {
+            border-color: #38bdf8;
+            color: #38bdf8;
+        }
+
+
+        /* =========================
+           SECTIONS
+        ========================= */
+
+        section {
+            padding: 100px 0;
+        }
+
+        .section-label {
+            color: #38bdf8;
+
+            font-size: 14px;
+            font-weight: bold;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            color: white;
+
+            font-size: 38px;
+
+            margin-bottom: 35px;
+        }
+
+        .section-text {
+            max-width: 850px;
+
             color: #94a3b8;
             font-size: 17px;
         }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 12px;
-            margin-top: 25px;
+
+        /* =========================
+           ABOUT
+        ========================= */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns: 1.5fr 1fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .about-card {
+            background: #111827;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 12px;
+
+            padding: 30px;
+        }
+
+        .about-card h3 {
+            color: white;
+
+            margin-bottom: 15px;
+        }
+
+        .about-card p {
+            color: #94a3b8;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+
+        .skills-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(200px, 1fr));
+
+            gap: 15px;
+
+            margin-top: 35px;
         }
 
         .skill {
-            padding: 10px 16px;
-            background: #1e293b;
-            border-radius: 6px;
+            background: #111827;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 8px;
+
+            padding: 18px;
+
             color: #cbd5e1;
+
+            transition: 0.3s;
         }
 
-        .projects {
+        .skill:hover {
+            border-color: #38bdf8;
+            transform: translateY(-3px);
+        }
+
+        .skill strong {
+            display: block;
+
+            color: white;
+
+            margin-bottom: 5px;
+        }
+
+        .skill small {
+            color: #64748b;
+        }
+
+
+        /* =========================
+           EXPERIENCE
+        ========================= */
+
+        .experience {
+            border-left: 2px solid #1e293b;
+
+            padding-left: 30px;
+
+            max-width: 850px;
+        }
+
+        .experience-item {
+            position: relative;
+
+            margin-bottom: 50px;
+        }
+
+        .experience-item::before {
+            content: "";
+
+            position: absolute;
+
+            width: 11px;
+            height: 11px;
+
+            background: #38bdf8;
+
+            border-radius: 50%;
+
+            left: -37px;
+            top: 7px;
+        }
+
+        .experience-item h3 {
+            color: white;
+
+            font-size: 22px;
+        }
+
+        .experience-company {
+            color: #38bdf8;
+
+            font-weight: bold;
+
+            margin: 5px 0;
+        }
+
+        .experience-date {
+            color: #64748b;
+
+            font-size: 14px;
+
+            margin-bottom: 15px;
+        }
+
+        .experience-item ul {
+            padding-left: 20px;
+
+            color: #94a3b8;
+        }
+
+        .experience-item li {
+            margin-bottom: 8px;
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================= */
+
+        .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(300px, 1fr));
+
             gap: 25px;
         }
 
         .project {
-            background: #1e293b;
-            padding: 25px;
-            border-radius: 10px;
-            border: 1px solid #334155;
+            background: #111827;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 12px;
+
+            padding: 30px;
+
+            transition: 0.3s;
+        }
+
+        .project:hover {
+            transform: translateY(-5px);
+
+            border-color: #38bdf8;
+        }
+
+        .project.featured {
+            border-color: #38bdf8;
+        }
+
+        .project-tag {
+            display: inline-block;
+
+            font-size: 12px;
+
+            color: #38bdf8;
+
+            border: 1px solid #164e63;
+
+            padding: 5px 9px;
+
+            border-radius: 20px;
+
+            margin-bottom: 18px;
         }
 
         .project h3 {
             color: white;
-            margin-bottom: 10px;
+
+            font-size: 22px;
+
+            margin-bottom: 12px;
         }
 
         .project p {
             color: #94a3b8;
+
+            margin-bottom: 20px;
         }
+
+        .tech-stack {
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 8px;
+        }
+
+        .tech {
+            background: #0b1120;
+
+            color: #64748b;
+
+            padding: 5px 9px;
+
+            border-radius: 5px;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           CERTIFICATIONS
+        ========================= */
+
+        .cert-grid {
+            display: grid;
+
+            grid-template-columns:
+                repeat(auto-fit, minmax(280px, 1fr));
+
+            gap: 20px;
+
+            margin-top: 30px;
+        }
+
+        .cert {
+            background: #111827;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 10px;
+
+            padding: 25px;
+        }
+
+        .cert h3 {
+            color: white;
+
+            font-size: 17px;
+
+            margin-bottom: 8px;
+        }
+
+        .cert p {
+            color: #64748b;
+
+            font-size: 14px;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================= */
+
+        .contact-box {
+            background: #111827;
+
+            border: 1px solid #1e293b;
+
+            border-radius: 12px;
+
+            padding: 45px;
+
+            text-align: center;
+
+            max-width: 850px;
+
+            margin: auto;
+        }
+
+        .contact-box p {
+            color: #94a3b8;
+
+            margin-bottom: 25px;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
 
         footer {
-            text-align: center;
-            padding: 30px;
             border-top: 1px solid #1e293b;
+
+            padding: 30px 0;
+
+            text-align: center;
+
             color: #64748b;
+
+            font-size: 14px;
         }
 
-        @media (max-width: 700px) {
-            nav {
-                padding: 15px 5%;
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 800px) {
+
+            .nav-links {
+                display: none;
             }
 
-            nav a {
-                margin-left: 10px;
-                font-size: 14px;
+            .about-grid {
+                grid-template-columns: 1fr;
             }
 
-            .hero h1 {
-                font-size: 40px;
+            .hero {
+                padding-top: 130px;
             }
 
-            .hero h2 {
-                font-size: 22px;
+            section {
+                padding: 75px 0;
+            }
+
+            .section-title {
+                font-size: 32px;
+            }
+
+            .contact-box {
+                padding: 30px 20px;
             }
         }
+
     </style>
 </head>
 
+
 <body>
 
-<nav>
-    <div class="logo">Joshua Coquia</div>
 
-    <div>
-        <a href="#about">About</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+<!-- =========================
+     NAVIGATION
+========================= -->
+
+<nav>
+
+    <div class="nav-container">
+
+        <div class="logo">
+            Joshua<span>.</span>
+        </div>
+
+        <div class="nav-links">
+
+            <a href="#about">About</a>
+
+            <a href="#skills">Skills</a>
+
+            <a href="#experience">Experience</a>
+
+            <a href="#projects">Projects</a>
+
+            <a href="#certifications">Certifications</a>
+
+            <a href="#contact">Contact</a>
+
+        </div>
+
     </div>
+
 </nav>
 
+
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
-    <div>
-        <h1>Joshua Coquia</h1>
 
-        <h2>IT Support Specialist | IT Automation | Systems Administration</h2>
+    <div class="container">
 
-        <p>
-            IT professional with hands-on experience in technical support,
-            troubleshooting, POS systems, networking, Windows administration,
-            and IT automation.
-        </p>
+        <div class="hero-content">
 
-        <a href="#projects" class="button">View My Projects</a>
-        <a href="#contact" class="button secondary">Contact Me</a>
+            <div class="hero-label">
+                IT Professional
+            </div>
+
+            <h1>
+                Joshua <span>Coquia</span>
+            </h1>
+
+            <h2>
+                IT Support Specialist | IT Automation
+            </h2>
+
+            <p>
+                IT professional with hands-on experience in technical support,
+                hardware and software troubleshooting, business systems,
+                POS environments, and workflow automation. Interested in
+                building efficient IT solutions through automation, AI,
+                cloud technologies, and modern business systems.
+            </p>
+
+            <div class="buttons">
+
+                <a href="#projects" class="btn btn-primary">
+                    View Projects
+                </a>
+
+                <a href="mailto:coquia.josh@gmail.com"
+                   class="btn btn-outline">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
     </div>
+
 </section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
 
 <section id="about">
-    <div class="container">
-        <h2 class="section-title">About Me</h2>
 
-        <p class="about-text">
-            I am a BSIT graduate with a strong interest in IT support,
-            systems administration, automation, and cloud technologies.
-            I enjoy solving technical problems and building systems that
-            make IT processes more efficient.
-        </p>
+    <div class="container">
+
+        <div class="about-grid">
+
+            <div>
+
+                <div class="section-label">
+                    About Me
+                </div>
+
+                <h2 class="section-title">
+                    Building practical IT solutions
+                </h2>
+
+                <p class="section-text">
+
+                    I am a Bachelor of Science in Information Technology
+                    graduate with hands-on experience in technical support,
+                    troubleshooting, business systems, and IT operations.
+
+                    <br><br>
+
+                    My interests include IT automation, workflow design,
+                    cloud technologies, Microsoft technologies, and
+                    AI-assisted solutions.
+
+                    <br><br>
+
+                    I enjoy understanding technical problems and finding
+                    practical solutions that can improve everyday IT
+                    operations.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>
+                    Education
+                </h3>
+
+                <p>
+                    <strong>BS Information Technology</strong>
+                    <br>
+                    Cum Laude
+                </p>
+
+                <br>
+
+                <h3>
+                    Focus Areas
+                </h3>
+
+                <p>
+                    IT Support<br>
+                    IT Automation<br>
+                    Systems Administration<br>
+                    Cloud Technologies<br>
+                    Business Systems
+                </p>
+
+            </div>
+
+        </div>
+
     </div>
+
 </section>
+
+
+
+<!-- =========================
+     SKILLS
+========================= -->
 
 <section id="skills">
-    <div class="container">
-        <h2 class="section-title">Technical Skills</h2>
 
-        <div class="skills">
-            <div class="skill">IT Support</div>
-            <div class="skill">Windows</div>
-            <div class="skill">Networking</div>
-            <div class="skill">POS Systems</div>
-            <div class="skill">n8n</div>
-            <div class="skill">Workflow Automation</div>
-            <div class="skill">Google Workspace</div>
-            <div class="skill">Microsoft Azure</div>
-            <div class="skill">SQL</div>
-            <div class="skill">Troubleshooting</div>
+    <div class="container">
+
+        <div class="section-label">
+            Technical Skills
         </div>
+
+        <h2 class="section-title">
+            Tools & Technologies
+        </h2>
+
+
+        <div class="skills-grid">
+
+            <div class="skill">
+                <strong>IT Support</strong>
+                <small>
+                    Hardware & software troubleshooting
+                </small>
+            </div>
+
+            <div class="skill">
+                <strong>Windows</strong>
+                <small>
+                    Installation, configuration & troubleshooting
+                </small>
+            </div>
+
+            <div class="skill">
+                <strong>Networking</strong>
+                <small>
+                    Basic network troubleshooting
+                </small>
+            </div>
+
+            <div class="skill">
+                <strong>POS Systems</strong>
+                <small>
+                    POS and business system support
+                </small>
+            </div>
+
+            <div class="skill">
+                <strong>n8n</strong>
+                <small>
+                    Workflow automation
+                </small>
+            </div>
+
+            <div class="skill">
+                <strong>AI Automation</strong>
+                <small>
+                    AI-assisted workflow processing
+                </small>
+            </div>
+
+            <div class="skill">
+                <strong>Microsoft Azure</strong>
+                <small>
+                    Cloud & identity fundamentals
+                </small>
+            </div>
+
+            <div class="skill">
+                <strong>SQL</strong>
+                <small>
+                    Database fundamentals
+                </small>
+            </div>
+
+        </div>
+
     </div>
+
 </section>
+
+
+
+<!-- =========================
+     EXPERIENCE
+========================= -->
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-label">
+            Experience
+        </div>
+
+        <h2 class="section-title">
+            Professional Experience
+        </h2>
+
+
+        <div class="experience">
+
+            <div class="experience-item">
+
+                <h3>
+                    IT Assistant / Technical Support Specialist
+                </h3>
+
+                <div class="experience-company">
+                    Eight8ate
+                </div>
+
+                <div class="experience-date">
+                    July 2025 – June 2026
+                </div>
+
+                <ul>
+
+                    <li>
+                        Provided technical support for hardware,
+                        software, and business systems.
+                    </li>
+
+                    <li>
+                        Troubleshot POS and related operational
+                        technology issues.
+                    </li>
+
+                    <li>
+                        Performed Windows installation,
+                        reformatting, driver installation,
+                        and system configuration.
+                    </li>
+
+                    <li>
+                        Assisted with network troubleshooting
+                        and connectivity issues.
+                    </li>
+
+                    <li>
+                        Supported business applications and
+                        technology used in operational environments.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROJECTS
+========================= -->
 
 <section id="projects">
+
     <div class="container">
-        <h2 class="section-title">Projects</h2>
 
-        <div class="projects">
+        <div class="section-label">
+            Projects
+        </div>
 
-            <div class="project">
-                <h3>AI-Powered IT Ticket Automation</h3>
+        <h2 class="section-title">
+            Featured Projects
+        </h2>
+
+
+        <div class="projects-grid">
+
+
+            <!-- FEATURED PROJECT -->
+
+            <div class="project featured">
+
+                <div class="project-tag">
+                    Featured Project
+                </div>
+
+                <h3>
+                    AI-Powered IT Ticket Automation
+                </h3>
 
                 <p>
-                    An automated IT ticket workflow using n8n, Google Forms,
-                    Google Sheets, AI, and dashboards to classify tickets,
-                    determine priority, recommend actions, and route issues.
+
+                    An automated IT ticket workflow designed to
+                    process submitted issues, classify tickets,
+                    determine priority, generate recommended
+                    actions, and organize tickets for follow-up.
+
                 </p>
+
+                <div class="tech-stack">
+
+                    <span class="tech">n8n</span>
+
+                    <span class="tech">Google Forms</span>
+
+                    <span class="tech">Google Sheets</span>
+
+                    <span class="tech">AI</span>
+
+                    <span class="tech">Automation</span>
+
+                    <span class="tech">Dashboard</span>
+
+                </div>
+
             </div>
 
+
+
+            <!-- PROJECT 2 -->
+
             <div class="project">
-                <h3>IT Support & Troubleshooting</h3>
+
+                <div class="project-tag">
+                    IT Support
+                </div>
+
+                <h3>
+                    IT Support & Troubleshooting
+                </h3>
 
                 <p>
-                    Hands-on troubleshooting involving computers, POS systems,
-                    networking, software installation, Windows systems,
-                    and hardware-related issues.
+
+                    Practical IT support experience involving
+                    computer troubleshooting, Windows systems,
+                    POS environments, hardware, software, and
+                    network connectivity.
+
                 </p>
+
+                <div class="tech-stack">
+
+                    <span class="tech">Windows</span>
+
+                    <span class="tech">Networking</span>
+
+                    <span class="tech">Hardware</span>
+
+                    <span class="tech">POS</span>
+
+                </div>
+
             </div>
 
+
+
+            <!-- PROJECT 3 -->
+
             <div class="project">
-                <h3>Azure Administration Lab</h3>
+
+                <div class="project-tag">
+                    Cloud
+                </div>
+
+                <h3>
+                    Microsoft Azure Administration Lab
+                </h3>
 
                 <p>
-                    Cloud administration and Microsoft Azure practice involving
-                    identity, resources, and basic cloud infrastructure.
+
+                    Hands-on learning and lab work focused on
+                    Microsoft Azure, identity, security,
+                    compliance, and cloud administration concepts.
+
                 </p>
+
+                <div class="tech-stack">
+
+                    <span class="tech">Azure</span>
+
+                    <span class="tech">Microsoft Entra</span>
+
+                    <span class="tech">SC-900</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CERTIFICATIONS
+========================= -->
+
+<section id="certifications">
+
+    <div class="container">
+
+        <div class="section-label">
+            Credentials
+        </div>
+
+        <h2 class="section-title">
+            Certifications
+        </h2>
+
+
+        <div class="cert-grid">
+
+
+            <div class="cert">
+
+                <h3>
+                    Microsoft Certified:
+                    Security, Compliance, and Identity Fundamentals
+                </h3>
+
+                <p>
+                    SC-900
+                </p>
+
+            </div>
+
+
+            <div class="cert">
+
+                <h3>
+                    Computer Systems Servicing (CSS) NC II
+                </h3>
+
+                <p>
+                    TESDA
+                </p>
+
+            </div>
+
+
+            <div class="cert">
+
+                <h3>
+                    Google Technical Support Fundamentals
+                </h3>
+
+                <p>
+                    Google / Coursera
+                </p>
+
+            </div>
+
+
+        </div>
+
+
+        <br><br>
+
+
+        <div class="section-label">
+            Professional Development
+        </div>
+
+
+        <div class="cert-grid">
+
+
+            <div class="cert">
+
+                <h3>
+                    Creating and Designing Digital Products with Canva
+                </h3>
+
+            </div>
+
+
+            <div class="cert">
+
+                <h3>
+                    Using WordPress to Create a Business Blog
+                </h3>
+
+            </div>
+
+
+            <div class="cert">
+
+                <h3>
+                    Building a Free Website with WordPress
+                </h3>
+
+            </div>
+
+
+            <div class="cert">
+
+                <h3>
+                    Getting Started with Microsoft Excel
+                </h3>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-box">
+
+            <div class="section-label">
+                Contact
+            </div>
+
+            <h2 class="section-title">
+                Let's Connect
+            </h2>
+
+            <p>
+
+                I'm open to opportunities in IT support,
+                technical support, IT automation, and related
+                technology roles.
+
+            </p>
+
+            <div class="buttons">
+
+                <a href="mailto:coquia.josh@gmail.com"
+                   class="btn btn-primary">
+
+                    Email Me
+
+                </a>
+
+                <a href="https://github.com/coqss"
+                   target="_blank"
+                   class="btn btn-outline">
+
+                    GitHub
+
+                </a>
+
             </div>
 
         </div>
+
     </div>
+
 </section>
 
-<section id="contact">
-    <div class="container">
-        <h2 class="section-title">Contact</h2>
 
-        <p class="about-text">
-            Interested in working together or discussing an IT opportunity?
-            Feel free to reach out.
-        </p>
-    </div>
-</section>
+
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
-    © 2026 Joshua Coquia. All rights reserved.
+
+    <div class="container">
+
+        © 2026 Joshua Coquia · IT Support Specialist | IT Automation
+
+    </div>
+
 </footer>
+
 
 </body>
 </html>
