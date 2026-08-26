@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AI IT Ticket Automation | Joshua Coquia
+    </title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+
+            background: #0b1120;
+
+            color: #e2e8f0;
+
+            line-height: 1.7;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: 90%;
+
+            max-width: 1000px;
+
+            margin: auto;
+        }
+
+
+        /* NAVIGATION */
+
+        nav {
+            position: fixed;
+
+            top: 0;
+            left: 0;
+
+            width: 100%;
+
+            background: rgba(11,17,32,0.95);
+
+            border-bottom:
+                1px solid #1e293b;
+
+            z-index: 1000;
+        }
+
+        .nav-container {
+
+            width: 90%;
+
+            max-width: 1150px;
+
+            margin: auto;
+
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            align-items: center;
+
+            padding: 18px 0;
+        }
+
+        .logo {
+
+            font-size: 22px;
+
+            font-weight: bold;
+
+            color: white;
+        }
+
+        .logo span {
+            color: #38bdf8;
+        }
+
+        .back {
+
+            color: #94a3b8;
+
+            transition: 0.3s;
+        }
+
+        .back:hover {
+
+            color: #38bdf8;
+        }
+
+
+        /* HERO */
+
+        .project-hero {
+
+            padding-top: 160px;
+
+            padding-bottom: 80px;
+        }
+
+        .label {
+
+            color: #38bdf8;
+
+            font-size: 14px;
+
+            font-weight: bold;
+
+            letter-spacing: 2px;
+
+            text-transform:
+                uppercase;
+
+            margin-bottom: 15px;
+        }
+
+        h1 {
+
+            color: white;
+
+            font-size:
+                clamp(40px, 6vw, 64px);
+
+            line-height: 1.1;
+
+            margin-bottom: 20px;
+        }
+
+        .hero-description {
+
+            max-width: 800px;
+
+            color: #94a3b8;
+
+            font-size: 19px;
+        }
+
+
+        /* SECTIONS */
+
+        section {
+
+            padding: 70px 0;
+
+            border-top:
+                1px solid #1e293b;
+        }
+
+        h2 {
+
+            color: white;
+
+            font-size: 32px;
+
+            margin-bottom: 20px;
+        }
+
+        h3 {
+
+            color: white;
+
+            margin-bottom: 10px;
+        }
+
+        p {
+
+            color: #94a3b8;
+
+            margin-bottom: 18px;
+        }
+
+
+        /* TECHNOLOGIES */
+
+        .tech-stack {
+
+            display: flex;
+
+            flex-wrap: wrap;
+
+            gap: 10px;
+
+            margin-top: 25px;
+        }
+
+        .tech {
+
+            background: #111827;
+
+            border:
+                1px solid #334155;
+
+            color: #cbd5e1;
+
+            padding: 8px 13px;
+
+            border-radius: 6px;
+
+            font-size: 14px;
+        }
+
+
+        /* WORKFLOW */
+
+        .workflow {
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 12px;
+
+            margin-top: 30px;
+        }
+
+        .workflow-step {
+
+            background: #111827;
+
+            border:
+                1px solid #1e293b;
+
+            padding: 20px;
+
+            border-radius: 8px;
+
+            color: #cbd5e1;
+
+            text-align: center;
+        }
+
+        .workflow-arrow {
+
+            text-align: center;
+
+            color: #38bdf8;
+
+            font-size: 22px;
+        }
+
+
+        /* CARDS */
+
+        .cards {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(250px, 1fr)
+                );
+
+            gap: 20px;
+
+            margin-top: 30px;
+        }
+
+        .card {
+
+            background: #111827;
+
+            border:
+                1px solid #1e293b;
+
+            padding: 25px;
+
+            border-radius: 10px;
+        }
+
+
+        /* SCREENSHOTS */
+
+        .screenshots {
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(
+                    auto-fit,
+                    minmax(280px, 1fr)
+                );
+
+            gap: 20px;
+
+            margin-top: 30px;
+        }
+
+        .screenshot {
+
+            background: #111827;
+
+            border:
+                1px solid #1e293b;
+
+            border-radius: 10px;
+
+            overflow: hidden;
+        }
+
+        .screenshot-placeholder {
+
+            min-height: 200px;
+
+            display: flex;
+
+            align-items: center;
+
+            justify-content: center;
+
+            color: #64748b;
+
+            padding: 20px;
+
+            text-align: center;
+        }
+
+
+        /* BUTTON */
+
+        .button {
+
+            display: inline-block;
+
+            background: #38bdf8;
+
+            color: #07111f;
+
+            padding: 12px 22px;
+
+            border-radius: 7px;
+
+            font-weight: bold;
+
+            margin-top: 15px;
+        }
+
+
+        /* FOOTER */
+
+        footer {
+
+            border-top:
+                1px solid #1e293b;
+
+            padding: 30px 0;
+
+            text-align: center;
+
+            color: #64748b;
+        }
+
+
+        /* MOBILE */
+
+        @media (max-width: 600px) {
+
+            .project-hero {
+
+                padding-top: 120px;
+            }
+
+            section {
+
+                padding: 55px 0;
+            }
+
+            h2 {
+
+                font-size: 28px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="nav-container">
+
+        <div class="logo">
+            Joshua<span>.</span>
+        </div>
+
+        <a href="index.html"
+           class="back">
+
+            ← Back to Portfolio
+
+        </a>
+
+    </div>
+
+</nav>
+
+
+
+<!-- HERO -->
+
+<div class="project-hero">
+
+    <div class="container">
+
+        <div class="label">
+            Featured Project
+        </div>
+
+        <h1>
+            AI-Powered IT Ticket Automation
+        </h1>
+
+        <p class="hero-description">
+
+            An automated IT ticket processing system designed
+            to reduce manual ticket handling by automatically
+            analyzing submitted issues, assigning categories,
+            determining priority, generating recommended actions,
+            and organizing tickets for follow-up.
+
+        </p>
+
+        <div class="tech-stack">
+
+            <span class="tech">n8n</span>
+
+            <span class="tech">
+                Google Forms
+            </span>
+
+            <span class="tech">
+                Google Sheets
+            </span>
+
+            <span class="tech">
+                AI
+            </span>
+
+            <span class="tech">
+                Workflow Automation
+            </span>
+
+            <span class="tech">
+                Dashboard
+            </span>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- PROJECT OVERVIEW -->
+
+<section>
+
+    <div class="container">
+
+        <div class="label">
+            Overview
+        </div>
+
+        <h2>
+            Project Overview
+        </h2>
+
+        <p>
+
+            This project demonstrates how workflow automation
+            and AI can be used to streamline an IT ticket
+            management process.
+
+        </p>
+
+        <p>
+
+            The system receives IT issues submitted through
+            a form and processes the information through an
+            automated workflow.
+
+        </p>
+
+        <p>
+
+            The workflow can analyze the submitted issue,
+            determine its category and priority, generate
+            a recommended action, and organize the resulting
+            ticket information for further processing.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- PROBLEM -->
+
+<section>
+
+    <div class="container">
+
+        <div class="label">
+            Problem
+        </div>
+
+        <h2>
+            The Problem
+        </h2>
+
+        <p>
+
+            IT support teams may receive many tickets containing
+            different types of hardware, software, network,
+            and operational problems.
+
+        </p>
+
+        <p>
+
+            Manually reviewing each ticket, determining its
+            category, identifying its urgency, and deciding
+            what action should be taken can take time and
+            introduce inconsistencies.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- SOLUTION -->
+
+<section>
+
+    <div class="container">
+
+        <div class="label">
+            Solution
+        </div>
+
+        <h2>
+            The Solution
+        </h2>
+
+        <p>
+
+            I designed an automated workflow using n8n to
+            process incoming IT tickets and enrich the submitted
+            information using AI-assisted analysis.
+
+        </p>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    Ticket Classification
+                </h3>
+
+                <p>
+
+                    Analyze the issue and assign an appropriate
+                    IT category.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Priority Analysis
+                </h3>
+
+                <p>
+
+                    Determine the appropriate priority level
+                    based on the submitted issue.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Recommended Action
+                </h3>
+
+                <p>
+
+                    Generate a suggested troubleshooting or
+                    support action.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Ticket Organization
+                </h3>
+
+                <p>
+
+                    Organize the processed ticket information
+                    for further handling and reporting.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ARCHITECTURE -->
+
+<section>
+
+    <div class="container">
+
+        <div class="label">
+            Architecture
+        </div>
+
+        <h2>
+            Workflow Architecture
+        </h2>
+
+        <div class="workflow">
+
+            <div class="workflow-step">
+                Employee submits IT issue
+            </div>
+
+            <div class="workflow-arrow">
+                ↓
+            </div>
+
+            <div class="workflow-step">
+                Google Forms
+            </div>
+
+            <div class="workflow-arrow">
+                ↓
+            </div>
+
+            <div class="workflow-step">
+                Google Sheets
+            </div>
+
+            <div class="workflow-arrow">
+                ↓
+            </div>
+
+            <div class="workflow-step">
+                n8n Automation Workflow
+            </div>
+
+            <div class="workflow-arrow">
+                ↓
+            </div>
+
+            <div class="workflow-step">
+                AI Ticket Analysis
+            </div>
+
+            <div class="workflow-arrow">
+                ↓
+            </div>
+
+            <div class="workflow-step">
+                Category + Priority + Recommended Action
+            </div>
+
+            <div class="workflow-arrow">
+                ↓
+            </div>
+
+            <div class="workflow-step">
+                Ticket Routing & Dashboard
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- TECHNOLOGIES -->
+
+<section>
+
+    <div class="container">
+
+        <div class="label">
+            Technologies
+        </div>
+
+        <h2>
+            Technologies Used
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>
+                    n8n
+                </h3>
+
+                <p>
+                    Used to design and automate the workflow
+                    connecting the different services.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Google Forms
+                </h3>
+
+                <p>
+                    Used as the interface for submitting IT
+                    support issues.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Google Sheets
+                </h3>
+
+                <p>
+                    Used to store and organize ticket information.
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    AI
+                </h3>
+
+                <p>
+                    Used to assist with ticket classification,
+                    priority analysis, and recommended actions.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- SCREENSHOTS -->
+
+<section>
+
+    <div class="container">
+
+        <div class="label">
+            Demonstration
+        </div>
+
+        <h2>
+            Project Screenshots
+        </h2>
+
+        <p>
+
+            Screenshots demonstrating the workflow, ticket
+            processing, and dashboard will be added here.
+
+        </p>
+
+
+        <div class="screenshots">
+
+
+            <div class="screenshot">
+
+                <div class="screenshot-placeholder">
+
+                    n8n Workflow Screenshot
+
+                </div>
+
+            </div>
+
+
+            <div class="screenshot">
+
+                <div class="screenshot-placeholder">
+
+                    Ticket Processing Screenshot
+
+                </div>
+
+            </div>
+
+
+            <div class="screenshot">
+
+                <div class="screenshot-placeholder">
+
+                    Dashboard Screenshot
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- LEARNING -->
+
+<section>
+
+    <div class="container">
+
+        <div class="label">
+            Learning
+        </div>
+
+        <h2>
+            What I Learned
+        </h2>
+
+        <div class="cards">
+
+
+            <div class="card">
+
+                <h3>
+                    Workflow Automation
+                </h3>
+
+                <p>
+
+                    Learned how different services can be
+                    connected to create an automated process.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    AI Integration
+                </h3>
+
+                <p>
+
+                    Learned how AI can be integrated into
+                    workflows to assist with decision-making
+                    and data processing.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Data Processing
+                </h3>
+
+                <p>
+
+                    Worked with structured ticket information
+                    and automated data transformation.
+
+                </p>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>
+                    Troubleshooting
+                </h3>
+
+                <p>
+
+                    Troubleshot workflow connections,
+                    credentials, mappings, and automation logic.
+
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- BACK -->
+
+<section>
+
+    <div class="container">
+
+        <a href="index.html"
+           class="button">
+
+            ← Return to Portfolio
+
+        </a>
+
+    </div>
+
+</section>
+
+
+
+<footer>
+
+    <div class="container">
+
+        © 2026 Joshua Coquia · IT Support Specialist | IT Automation
+
+    </div>
+
+</footer>
+
+
+</body>
+
+</html>
