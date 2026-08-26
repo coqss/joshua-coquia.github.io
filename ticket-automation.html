@@ -290,52 +290,54 @@
         }
 
 
-        /* SCREENSHOTS */
+       /* =========================
+   CASE STUDY SCREENSHOTS
+========================= */
 
-        .screenshots {
+.case-study-image {
 
-            display: grid;
+    margin-top: 55px;
 
-            grid-template-columns:
-                repeat(
-                    auto-fit,
-                    minmax(280px, 1fr)
-                );
+    background: #111827;
 
-            gap: 20px;
+    border: 1px solid #1e293b;
 
-            margin-top: 30px;
-        }
+    border-radius: 12px;
 
-        .screenshot {
+    overflow: hidden;
+}
 
-            background: #111827;
+.case-study-image img {
 
-            border:
-                1px solid #1e293b;
+    display: block;
 
-            border-radius: 10px;
+    width: 100%;
 
-            overflow: hidden;
-        }
+    height: auto;
 
-        .screenshot-placeholder {
+    background: #020617;
+}
 
-            min-height: 200px;
+.image-caption {
 
-            display: flex;
+    padding: 25px 28px;
+}
 
-            align-items: center;
+.image-caption h3 {
 
-            justify-content: center;
+    color: white;
 
-            color: #64748b;
+    font-size: 20px;
 
-            padding: 20px;
+    margin-bottom: 8px;
+}
 
-            text-align: center;
-        }
+.image-caption p {
 
+    color: #94a3b8;
+
+    margin-bottom: 0;
+}
 
         /* BUTTON */
 
@@ -822,59 +824,184 @@
         </div>
 
         <h2>
-            Project Screenshots
+            System in Action
         </h2>
 
         <p>
-
-            Screenshots demonstrating the workflow, ticket
-            processing, and dashboard will be added here.
-
+            The following screenshots demonstrate the complete
+            flow of the IT ticket automation system, from ticket
+            submission to automated processing, notification,
+            and dashboard monitoring.
         </p>
 
 
-        <div class="screenshots">
+        <!-- REQUEST FORM -->
 
+        <div class="case-study-image">
 
-            <div class="screenshot">
+            <img
+                src="images/request-form.png"
+                alt="IT Helpdesk Request Form"
+            >
 
-                <div class="screenshot-placeholder">
+            <div class="image-caption">
 
-                    n8n Workflow Screenshot
+                <h3>
+                    1. IT Helpdesk Request Form
+                </h3>
 
-                </div>
-
-            </div>
-
-
-            <div class="screenshot">
-
-                <div class="screenshot-placeholder">
-
-                    Ticket Processing Screenshot
-
-                </div>
-
-            </div>
-
-
-            <div class="screenshot">
-
-                <div class="screenshot-placeholder">
-
-                    Dashboard Screenshot
-
-                </div>
+                <p>
+                    Users submit an IT support request through
+                    a structured request form containing their
+                    contact information, issue, urgency, and
+                    department.
+                </p>
 
             </div>
 
+        </div>
+
+
+        <!-- N8N WORKFLOW -->
+
+        <div class="case-study-image">
+
+            <img
+                src="images/n8n-workflow.png"
+                alt="n8n IT ticket automation workflow"
+            >
+
+            <div class="image-caption">
+
+                <h3>
+                    2. Automated n8n Workflow
+                </h3>
+
+                <p>
+                    The n8n workflow receives the submitted
+                    ticket, processes the information using
+                    AI-assisted analysis, determines the
+                    appropriate priority action, and routes
+                    the resulting ticket to the appropriate
+                    support team.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- WORKFLOW EXECUTION -->
+
+        <div class="case-study-image">
+
+            <img
+                src="images/workflow-execution.png"
+                alt="Successful n8n workflow execution"
+            >
+
+            <div class="image-caption">
+
+                <h3>
+                    3. Successful Workflow Execution
+                </h3>
+
+                <p>
+                    The workflow successfully executes the
+                    connected automation steps, demonstrating
+                    the processing and routing of a submitted
+                    support ticket.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- ACKNOWLEDGMENT -->
+
+        <div class="case-study-image">
+
+            <img
+                src="images/acknowledgment.png"
+                alt="Automated IT helpdesk acknowledgment email"
+            >
+
+            <div class="image-caption">
+
+                <h3>
+                    4. Automated Ticket Acknowledgment
+                </h3>
+
+                <p>
+                    After processing the request, the system
+                    automatically sends an acknowledgment
+                    containing the ticket ID, issue, category,
+                    priority, assigned team, and recommended
+                    action.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- DASHBOARD -->
+
+        <div class="case-study-image">
+
+            <img
+                src="images/dashboard.png"
+                alt="AI Helpdesk IT Ticket Monitoring Dashboard"
+            >
+
+            <div class="image-caption">
+
+                <h3>
+                    5. IT Ticket Monitoring Dashboard
+                </h3>
+
+                <p>
+                    The dashboard provides an overview of ticket
+                    volume, status, priority, department,
+                    and recent tickets, allowing support teams
+                    to monitor the system and track incoming
+                    requests.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- SUBMISSION CONFIRMATION -->
+
+        <div class="case-study-image">
+
+            <img
+                src="images/request-submitted.png"
+                alt="IT helpdesk request submission confirmation"
+            >
+
+            <div class="image-caption">
+
+                <h3>
+                    6. Submission Confirmation
+                </h3>
+
+                <p>
+                    The request form confirms that the user's
+                    submission has been successfully recorded
+                    and is ready for automated processing.
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
 </section>
-
 
 
 <!-- LEARNING -->
